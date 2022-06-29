@@ -14,7 +14,7 @@ import json
 #object of Options class, passing headless parameter
 c = Options()
 c.add_argument('--headless')
-s = Service('chromedriver v103.exe')
+s = Service('chromedriver-v103.exe')
 browser = webdriver.Chrome(service=s, options=c)
 browser.set_window_size(1120, 550)
 
