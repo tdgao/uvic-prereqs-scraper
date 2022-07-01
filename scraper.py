@@ -29,7 +29,7 @@ def get_page_source(url):
     #object of Options class, passing headless parameter
     c = Options()
     c.add_argument('--headless')
-    s = Service('chromedriver-v103.exe')
+    s = Service('drivers/chromedriver-v103.exe')
     browser = webdriver.Chrome(service=s, options=c)
     # browser.set_window_size(1120, 550)
 
@@ -121,8 +121,8 @@ def get_course_title(soup):
 program_name = "Biology (Bachelor of Science - Major)"
 program_url = 'https://www.uvic.ca/calendar/undergrad/index.php#/programs/S1gtLTm0ME'
 
-if ( not os.path.exists(program_name) ):
-    os.mkdir(program_name)
+# if ( not os.path.exists(program_name) ):
+#     os.mkdir(program_name)
 
 container = get_prereq_container(program_url)
 
@@ -138,5 +138,6 @@ for i, year_ul in enumerate(all_year_ul, 1):
 
 
 # Writing to sample.json
-with open("sample.json", "w") as outfile:
+json_output_name = str(program_name) + ".json"
+with open("output/"+json_output_name, "w") as outfile:
     outfile.write(json.dumps(program_requirements))
