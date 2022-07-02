@@ -107,7 +107,7 @@ def get_program_courses(courses_container):
             "requirements":requirements,
             "url": course_url
         }
-        if (i > 3): break #for testing
+        # if (i > 3): break #for testing
 
     print(json.dumps(program_courses, indent=2))
     return program_courses
