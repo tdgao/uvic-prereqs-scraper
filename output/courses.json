@@ -1,1 +1,69 @@
-{"ASTR150": {"courseId": "ASTR150", "shortDescription": "Concepts in Modern Astronomy", "prerequisites": [{"Complete  1  of the following": [{"Complete all of the following": [{"Completed or concurrently enrolled in 1 of: ": ["MATH100", "MATH109"]}, {"Completed or concurrently enrolled in 1 of: ": ["PHYS110", "PHYS120"]}]}, "or permission of the department."]}], "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/HySJ0P67N"}}
+{
+  "ATWP101": {
+    "courseId": "ATWP101",
+    "shortDescription": "Fundamentals of Academic Literacy",
+    "prerequisites": [],
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/rJXrGZkpr?group=Academic%20and%20Technical%20Writing%20Program%20(ATWP)&bc=true&bcCurrent=ATWP101%20-%20Fundamentals%20of%20Academic%20Literacy&bcGroup=Academic%20and%20Technical%20Writing%20Program%20(ATWP)&bcItemType=courses"
+  },
+  "ATWP135": {
+    "courseId": "ATWP135",
+    "shortDescription": "Academic Reading and Writing",
+    "prerequisites": [],
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/HJsvjl1TB?group=Academic%20and%20Technical%20Writing%20Program%20(ATWP)&bc=true&bcCurrent=ATWP135%20-%20Academic%20Reading%20and%20Writing&bcGroup=Academic%20and%20Technical%20Writing%20Program%20(ATWP)&bcItemType=courses"
+  },
+  "ATWP250": {
+    "courseId": "ATWP250",
+    "shortDescription": "Genres of Business Communication",
+    "prerequisites": [
+      {
+        "Complete  1  of the following": [
+          { "Complete 1 of: ": ["ATWP135", "ENGL146", "ENGL147", "ENGR110"] },
+          "or permission of the department. "
+        ]
+      }
+    ],
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/SkcMoKt_F?group=Academic%20and%20Technical%20Writing%20Program%20(ATWP)&bc=true&bcCurrent=ATWP250%20-%20Genres%20of%20Business%20Communication&bcGroup=Academic%20and%20Technical%20Writing%20Program%20(ATWP)&bcItemType=courses"
+  },
+  "ATWP305": {
+    "courseId": "ATWP305",
+    "shortDescription": "The Rhetoric of Health and Medicine",
+    "prerequisites": ["Academic Writing Requirement (AWR) satisfied"],
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/r1rPrjq_t?group=Academic%20and%20Technical%20Writing%20Program%20(ATWP)&bc=true&bcCurrent=ATWP305%20-%20The%20Rhetoric%20of%20Health%20and%20Medicine&bcGroup=Academic%20and%20Technical%20Writing%20Program%20(ATWP)&bcItemType=courses"
+  },
+  "AGEI472": {
+    "courseId": "AGEI472",
+    "shortDescription": "Healthy Ageing",
+    "prerequisites": [],
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/B16W6PaX4?group=Ageing%20(AGEI)&bc=true&bcCurrent=AGEI472%20-%20Healthy%20Ageing&bcGroup=Ageing%20(AGEI)&bcItemType=courses"
+  },
+  "AGEI473": {
+    "courseId": "AGEI473",
+    "shortDescription": "Chronic Disease and Ageing",
+    "prerequisites": [],
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/BkA-avT7N?group=Ageing%20(AGEI)&bc=true&bcCurrent=AGEI473%20-%20Chronic%20Disease%20and%20Ageing&bcGroup=Ageing%20(AGEI)&bcItemType=courses"
+  },
+  "ASL100A": {
+    "courseId": "ASL100A",
+    "shortDescription": "American Sign Language I",
+    "prerequisites": [],
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/S1zJAvTmV?group=American%20Sign%20Language%20(ASL)&bc=true&bcCurrent=ASL100A%20-%20American%20Sign%20Language%20I&bcGroup=American%20Sign%20Language%20(ASL)&bcItemType=courses"
+  },
+  "ASL100B": {
+    "courseId": "ASL100B",
+    "shortDescription": "American Sign Language II",
+    "prerequisites": [{ "Complete all of: ": ["ASL100A"] }],
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/rkf1RvaXN?group=American%20Sign%20Language%20(ASL)&bc=true&bcCurrent=ASL100B%20-%20American%20Sign%20Language%20II&bcGroup=American%20Sign%20Language%20(ASL)&bcItemType=courses"
+  },
+  "ASL200A": {
+    "courseId": "ASL200A",
+    "shortDescription": "American Sign Language III",
+    "prerequisites": [{ "Complete all of: ": ["ASL100B"] }],
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/rJ71ADpQ4?group=American%20Sign%20Language%20(ASL)&bc=true&bcCurrent=ASL200A%20-%20American%20Sign%20Language%20III&bcGroup=American%20Sign%20Language%20(ASL)&bcItemType=courses"
+  },
+  "ASL200B": {
+    "courseId": "ASL200B",
+    "shortDescription": "American Sign Language IV",
+    "prerequisites": [{ "Complete all of: ": ["ASL200A"] }],
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/BygmJRv6Q4?group=American%20Sign%20Language%20(ASL)&bc=true&bcCurrent=ASL200B%20-%20American%20Sign%20Language%20IV&bcGroup=American%20Sign%20Language%20(ASL)&bcItemType=courses"
+  }
+}

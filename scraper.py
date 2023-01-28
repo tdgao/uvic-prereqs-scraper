@@ -1,3 +1,5 @@
+import random
+import time
 from pkg_resources import require
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -12,7 +14,7 @@ import copy
 import json
 import os
 
-from utils import get_page_h2, top_ul
+from utils import clean_url, get_page_h2, top_ul
 
 
 """
@@ -28,7 +30,8 @@ for ul
 """
 
 
-def get_page_source(url):
+def get_page_source(url, load_element=".rules-wrapper"):
+    time.sleep(random.randrange(3, 10, 1))
     # object of Options class, passing headless parameter
     options = Options()
     # following 3 lines allow for headless
@@ -47,13 +50,15 @@ def get_page_source(url):
     browser.get(url)
 
     try:
-        # program waits until pre reqs container content is loaded
+        # program waits until specific element is loaded
         element = WebDriverWait(browser, 10).until(
             # class name of description h3 # id is container of loaded content
-            EC.presence_of_element_located((By.CLASS_NAME, "rules-wrapper"))
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, load_element))
         )
+
     except:
-        print("no rules wrapper after 10 seconds")
+        print("no element with selector: %s after 10 seconds" % load_element)
 
     # using BeautifulSoup to parse html
     soup = BeautifulSoup(browser.page_source, "html.parser")
@@ -107,6 +112,7 @@ def get_requirements(ul):
 
 
 def get_course_requirements(course_url):
+    clean_url(course_url)
     print("\nScraping course:", course_url)
     soup = get_page_source(course_url)
     container = get_prereq_container(soup=soup)
@@ -119,7 +125,7 @@ def get_course_requirements(course_url):
     course_id = course_title.split(" - ")[0]
     short_description = course_title.split(" - ")[1]
 
-    print("Scraped ", course_id)
+    print("Scraped", course_id)
 
     return {
         course_id: {
@@ -132,6 +138,7 @@ def get_course_requirements(course_url):
 
 
 def get_program_requirements(program_url):
+    clean_url(program_url)
     print("\nScraping program:", program_url)
 
     soup = get_page_source(program_url)
@@ -147,29 +154,83 @@ def get_program_requirements(program_url):
         year = "year-" + str(i)
         program_requirements[year] = requirements
 
-    print("Scraped ", program_title)
+    print("Scraped", program_title)
 
     return {
-        program_title: program_requirements
+        program_title: {
+            "programId": program_title,
+            "url": program_url,
+            "requirements": program_requirements
+        }
     }
 
 
+def get_all_program_reqs():
+    # get all program URLs
+    # run through URLs and populate object with requirements
+    # do the same with courses
+    # get all course name and urls, then requirements
+    all_program_reqs = {}
+
+    programs_url = "https://www.uvic.ca/calendar/undergrad/index.php#/programs"
+    programs_soup = get_page_source(programs_url, load_element="#__KUALI_TLP")
+    programs_container = programs_soup.select("#__KUALI_TLP ul")[0]
+    for i, program in enumerate(programs_container.find_all('a')):
+        # course_name = course.get_text()
+        program_url = "https://www.uvic.ca/calendar/undergrad/index.php" + \
+            str(program['href'])
+        # print(course_name, course_url)
+        program_reqs = get_program_requirements(program_url)
+        all_program_reqs = {**all_program_reqs, **program_reqs}
+
+        if i > 3:  # end early for testing
+            break
+
+    return all_program_reqs
+
+
+def get_all_course_reqs():
+    all_course_reqs = {}
+    # get subject list container, get all a tags from subject list,
+    # for each subject site, scrape all course prereqs
+    course_url = "https://www.uvic.ca/calendar/undergrad/index.php#/courses"
+    subjects_container = get_page_source(
+        course_url, load_element="#subjects-list-nav").select("#subjects-list-nav")[0]
+    for i, subject in enumerate(subjects_container.find_all('a')):
+        subject_url = "https://www.uvic.ca/calendar/undergrad/index.php" + \
+            str(subject['href'])
+        courses_container = get_page_source(
+            subject_url, load_element="#__KUALI_TLP ul").select("#__KUALI_TLP")[0]
+
+        if i > 2:  # end early for testing
+            break
+
+        for i, course in enumerate(courses_container.find_all('a')):
+            course_url = "https://www.uvic.ca/calendar/undergrad/index.php" + \
+                str(course['href'])
+            course_reqs = get_course_requirements(course_url)
+            all_course_reqs = {**all_course_reqs, **course_reqs}
+
+            if i > 2:  # end early for testing
+                break
+
+    return all_course_reqs
+
+
 def main():
-    program_url = 'https://www.uvic.ca/calendar/undergrad/index.php#/programs/S1gtLTm0ME'
-    program_requirements = get_program_requirements(program_url)
+    all_program_reqs = get_all_program_reqs()
 
     # Writing to programs.json
     json_output_name = "programs.json"
     with open("output/"+json_output_name, "w") as outfile:
-        outfile.write(json.dumps(program_requirements))
+        outfile.write(json.dumps(all_program_reqs))
 
-    course_url = "https://www.uvic.ca/calendar/undergrad/index.php#/courses/HySJ0P67N"
-    course_requirements = get_course_requirements(course_url)
+    all_course_reqs = get_all_course_reqs()
 
     # Writing to courses.json
     json_output_name = "courses.json"
     with open("output/"+json_output_name, "w") as outfile:
-        outfile.write(json.dumps(course_requirements))
+        outfile.write(json.dumps(all_course_reqs))
 
     print("\nEnd of scraping 😁😁😁")
 

@@ -1,1 +1,593 @@
-{"Biology (Bachelor of Science - Major)": {"year-1": [{"Complete all of the following": [{"Complete 1 of: ": ["BIOL184", "BIOL190B"]}, {"Complete 1 of: ": ["BIOL186", "BIOL190A"]}, {"Complete all of: ": ["CHEM101", "CHEM102"]}, {"Complete  1  of the following": [{"Complete all of the following": [{"Complete 1 of: ": ["MATH100", "MATH109"]}, {"Complete all of: ": ["MATH101"]}]}, {"Complete all of: ": ["MATH102", "MATH151"]}]}, {"Complete  1  of the following": [{"Complete all of: ": ["PHYS102"]}, {"Complete all of: ": ["PHYS102A", "PHYS102B"]}, {"Complete all of: ": ["PHYS110", "PHYS111"]}, {"Complete all of: ": ["PHYS120", "PHYS130"]}]}, "Complete 3 units of electives"]}], "year-2": [{"Complete all of the following": [{"Complete 1 of: ": ["BIOC299", "BIOC300A", "BIOC300B"]}, {"Complete all of: ": ["BIOL215", "BIOL225", "BIOL230", "CHEM231"]}, {"Complete 1 of: ": ["CHEM234", "CHEM235"]}, {"Complete 1 of: ": ["STAT255", "STAT260"]}, "Complete 1.5 units from ASTR BIOC, CHEM, CSC, EOS, MATH, MICR, PHYS, or STAT  100 - 499", "Complete 3 units of electives"]}], "year-3": [{"Complete all of the following": [{"Complete all of: ": ["BIOL355"]}, "Complete 7.5 units from BIOL or MRNE  300 - 499", "Complete 3 units from ASTR BIOC, CHEM, CSC, EOS, MATH, MICR, PHYS, or STAT  100 - 499", "Complete 3 units of electives"]}], "year-4": [{"Complete all of the following": [{"Complete 3 units from: ": ["BIOL307", "BIOL309", "BIOL311", "BIOL312", "BIOL319", "BIOL321", "BIOL322", "BIOL324", "BIOL325", "BIOL326", "BIOL329", "BIOL330", "BIOL335", "BIOL336", "BIOL345", "BIOL362", "BIOL365", "BIOL366", "BIOL409B", "BIOL410", "BIOL418", "BIOL448", "BIOL449"]}, "Complete 3 units from BIOL or MRNE  300 - 499", "Complete 9 units of electives"]}]}}
+{
+  "American Sign Language (Certificate)": {
+    "programId": "American Sign Language (Certificate)",
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/programs/SyJdy08nv?bc=true&bcCurrent=American%20Sign%20Language&bcItemType=programs",
+    "requirements": {
+      "year-1": [
+        {
+          "Complete all of the following": [
+            {
+              "Complete all of: ": ["ASL100A", "ASL100B", "ASL200A", "ASL200B"]
+            },
+            {
+              "Complete 3 of: ": [
+                "ASL300A",
+                "ASL300B",
+                "LING345",
+                "LING373",
+                "LING397"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Anthropology (General and Minor)": {
+    "programId": "Anthropology (General and Minor)",
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/programs/BkG9aQ0GE?bc=true&bcCurrent=Anthropology&bcItemType=programs",
+    "requirements": {
+      "year-1": [{ "Complete all of: ": ["ANTH100"] }],
+      "year-2": [{ "Complete all of: ": ["ANTH200", "ANTH240", "ANTH250"] }],
+      "year-3": ["Complete 9 units from ANTH  300 - 499"]
+    }
+  },
+  "Anthropology (Bachelor of Science - Honours)": {
+    "programId": "Anthropology (Bachelor of Science - Honours)",
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/programs/Sy2vaQAME?bc=true&bcCurrent=Anthropology&bcItemType=programs",
+    "requirements": {
+      "year-1": [
+        {
+          "Complete all of the following": [
+            { "Complete all of: ": ["ANTH100"] },
+            {
+              "Complete 1.5 units from: ": [
+                "CSC100",
+                "CSC105",
+                "CSC106",
+                "CSC130",
+                "MATH100",
+                "MATH102",
+                "MATH109",
+                "MATH151"
+              ]
+            },
+            "Complete 1.5 units of: courses from any of the following subject areas: ASTR, BCMB, BIOC, BIOL, CHEM, CSC, EOS, MATH (excluding MATH 120), MICR, MRNE, PHYS, STAT.",
+            "Complete 10.5 units of electives"
+          ]
+        }
+      ],
+      "year-2": [
+        {
+          "Complete all of the following": [
+            {
+              "Earned a minimum GPA of 6.5 in all of: ": [
+                "ANTH200",
+                "ANTH240",
+                "ANTH250",
+                "ANTH260"
+              ]
+            },
+            {
+              "Complete all of the following": [
+                {
+                  "Complete 3 units from: ": [
+                    "EPHE141",
+                    "EPHE201",
+                    "GEOG222",
+                    "GEOG226",
+                    "GEOG228",
+                    "GEOG274",
+                    "PSYC251"
+                  ]
+                },
+                "or courses from any of the following subject areas: ASTR, BCMB, BIOC, BIOL, CHEM, CSC, EOS, MATH (excluding MATH 120), MICR, MRNE, PHYS, STAT."
+              ]
+            },
+            "Complete 6 units of electives"
+          ]
+        }
+      ],
+      "year-3": [
+        {
+          "Complete all of the following": [
+            { "Complete all of: ": ["ANTH317", "ANTH319"] },
+            { "Complete 1 of: ": ["ANTH400A", "ANTH400B"] },
+            { "Complete all of: ": ["ANTH499"] },
+            {
+              "Complete all of the following": [
+                {
+                  "Complete 3 units from: ": [
+                    "EPHE341",
+                    "EPHE351",
+                    "EPHE355",
+                    "ES321",
+                    "ES341",
+                    "ES423",
+                    "ES461",
+                    "GEOG301",
+                    "GEOG308",
+                    "GEOG319",
+                    "GEOG322",
+                    "GEOG325",
+                    "GEOG328",
+                    "GEOG353",
+                    "GEOG453",
+                    "PSYC325",
+                    "PSYC332",
+                    "PSYC335",
+                    "PSYC336",
+                    "PSYC351D",
+                    "PSYC425"
+                  ]
+                },
+                "or 300- and 400-level courses from any of the following subject areas: ASTR, BCMB, BIOC, BIOL, CHEM, CSC, EOS, MATH, MICR, MRNE, PHYS, STAT."
+              ]
+            },
+            "Complete 3 units of: courses from Archaeology (see list below)",
+            "Complete 3 units of: courses from Biological Anthropology (see list below)",
+            "Complete 3 units of: courses from either Archaeology or Biological Anthropology (see lists below)",
+            {
+              "Cultural AnthropologyComplete 1 of: ": [
+                "ANTH302",
+                "ANTH303",
+                "ANTH304",
+                "ANTH305",
+                "ANTH307",
+                "ANTH312",
+                "ANTH314",
+                "ANTH315",
+                "ANTH325",
+                "ANTH329",
+                "ANTH336",
+                "ANTH365",
+                "ANTH366",
+                "ANTH371",
+                "ANTH372",
+                "ANTH373",
+                "ANTH382",
+                "ANTH391",
+                "ANTH393",
+                "ANTH396",
+                "ANTH405",
+                "ANTH408",
+                "ANTH410",
+                "ANTH433",
+                "ANTH481",
+                "ANTH483",
+                "ANTH491",
+                "ANTH493"
+              ]
+            },
+            {
+              "Method and TheoryComplete 2 of: ": [
+                "ANTH343",
+                "ANTH360",
+                "ANTH367",
+                "ANTH395",
+                "ANTH441",
+                "ANTH450",
+                "ANTH454",
+                "ANTH460",
+                "ANTH485",
+                "ANTH495",
+                "ANTH383",
+                "ANTH384"
+              ]
+            },
+            "Complete 3 units from ANTH  300 - 499",
+            "Complete 4.5 units of electives"
+          ]
+        }
+      ],
+      "year-4": [
+        "Select 3 units from Archaeology, 3 units from Biological Anthropology and 3 units from either list."
+      ],
+      "year-5": [
+        {
+          "Select from: ": [
+            "ANTH315",
+            "ANTH340",
+            "ANTH341",
+            "ANTH343",
+            "ANTH344",
+            "ANTH346",
+            "ANTH347",
+            "ANTH348",
+            "ANTH349",
+            "ANTH360",
+            "ANTH361",
+            "ANTH362",
+            "ANTH365",
+            "ANTH392",
+            "ANTH397",
+            "ANTH398",
+            "ANTH442",
+            "ANTH449",
+            "ANTH482",
+            "ANTH492"
+          ]
+        }
+      ],
+      "year-6": [
+        {
+          "Select from: ": [
+            "ANTH350",
+            "ANTH351",
+            "ANTH352",
+            "ANTH355",
+            "ANTH356",
+            "ANTH357",
+            "ANTH358",
+            "ANTH383",
+            "ANTH384",
+            "ANTH394",
+            "ANTH450",
+            "ANTH452",
+            "ANTH453",
+            "ANTH455",
+            "ANTH484",
+            "ANTH494"
+          ]
+        }
+      ]
+    }
+  },
+  "Anthropology (Bachelor of Science - Major)": {
+    "programId": "Anthropology (Bachelor of Science - Major)",
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/programs/SyjvTmCzN?bc=true&bcCurrent=Anthropology&bcItemType=programs",
+    "requirements": {
+      "year-1": [
+        {
+          "Complete all of the following": [
+            { "Complete all of: ": ["ANTH100"] },
+            {
+              "Complete 1.5 units from: ": [
+                "CSC100",
+                "CSC105",
+                "CSC106",
+                "CSC130",
+                "MATH100",
+                "MATH102",
+                "MATH109",
+                "MATH151"
+              ]
+            },
+            "Complete 1.5 units of: courses from any of the following subject areas: ASTR, BCMB, BIOC, BIOL, CHEM, CSC, EOS, MATH (excluding MATH 120), MICR, MRNE, PHYS, STAT.",
+            "Complete 10.5 units of electives"
+          ]
+        }
+      ],
+      "year-2": [
+        {
+          "Complete all of the following": [
+            {
+              "Complete all of: ": ["ANTH200", "ANTH240", "ANTH250", "ANTH260"]
+            },
+            {
+              "Complete all of the following": [
+                {
+                  "Complete 3 units from: ": [
+                    "EPHE141",
+                    "EPHE201",
+                    "GEOG222",
+                    "GEOG226",
+                    "GEOG228",
+                    "GEOG274",
+                    "PSYC251"
+                  ]
+                },
+                "or courses from any of the following subject areas: ASTR, BCMB, BIOC, BIOL, CHEM, CSC, EOS, MATH (excluding MATH 120), MICR, MRNE, PHYS, STAT."
+              ]
+            },
+            "Complete 6 units of electives"
+          ]
+        }
+      ],
+      "year-3": [
+        {
+          "Complete all of the following": [
+            { "Complete all of: ": ["ANTH317", "ANTH319"] },
+            {
+              "Complete all of the following": [
+                {
+                  "Complete 3 units from: ": [
+                    "EPHE341",
+                    "EPHE351",
+                    "EPHE355",
+                    "ES321",
+                    "ES341",
+                    "ES423",
+                    "ES461",
+                    "GEOG301",
+                    "GEOG308",
+                    "GEOG319",
+                    "GEOG322",
+                    "GEOG325",
+                    "GEOG328",
+                    "GEOG353",
+                    "GEOG453",
+                    "PSYC325",
+                    "PSYC332",
+                    "PSYC335",
+                    "PSYC336",
+                    "PSYC351D",
+                    "PSYC425"
+                  ]
+                },
+                "or 300- and 400-level courses from any of the following subject areas: ASTR, BCMB, BIOC, BIOL, CHEM, CSC, EOS, MATH, MICR, MRNE, PHYS, STAT."
+              ]
+            },
+            "Complete 3 units of: courses from Archaeology (see list below)",
+            "Complete 3 units of: courses from Biological Anthropology (see list below)",
+            "Complete 1.5 units of: courses from either Archaeology or Biological Anthropology (see lists below)",
+            {
+              "Cultural AnthropologyComplete 1 of: ": [
+                "ANTH302",
+                "ANTH303",
+                "ANTH304",
+                "ANTH305",
+                "ANTH307",
+                "ANTH312",
+                "ANTH314",
+                "ANTH315",
+                "ANTH325",
+                "ANTH329",
+                "ANTH336",
+                "ANTH365",
+                "ANTH366",
+                "ANTH371",
+                "ANTH372",
+                "ANTH373",
+                "ANTH382",
+                "ANTH391",
+                "ANTH393",
+                "ANTH396",
+                "ANTH405",
+                "ANTH408",
+                "ANTH410",
+                "ANTH433",
+                "ANTH455",
+                "ANTH481",
+                "ANTH483",
+                "ANTH491",
+                "ANTH493"
+              ]
+            },
+            {
+              "Method and TheoryComplete 1 of: ": [
+                "ANTH343",
+                "ANTH360",
+                "ANTH367",
+                "ANTH383",
+                "ANTH384",
+                "ANTH395",
+                "ANTH441",
+                "ANTH450",
+                "ANTH454",
+                "ANTH460",
+                "ANTH485",
+                "ANTH495"
+              ]
+            },
+            "Complete 3 units of: 300- to 400-level electives",
+            "Complete 9 units of electives",
+            "Complete 1.5 units from ANTH  300 - 499"
+          ]
+        }
+      ],
+      "year-4": ["Select from the courses below"],
+      "year-5": [
+        {
+          "Select from: ": [
+            "ANTH315",
+            "ANTH340",
+            "ANTH341",
+            "ANTH343",
+            "ANTH344",
+            "ANTH346",
+            "ANTH347",
+            "ANTH348",
+            "ANTH349",
+            "ANTH360",
+            "ANTH361",
+            "ANTH362",
+            "ANTH365",
+            "ANTH392",
+            "ANTH397",
+            "ANTH398",
+            "ANTH442",
+            "ANTH449",
+            "ANTH482",
+            "ANTH492"
+          ]
+        }
+      ],
+      "year-6": [
+        {
+          "Select from: ": [
+            "ANTH350",
+            "ANTH351",
+            "ANTH352",
+            "ANTH355",
+            "ANTH356",
+            "ANTH357",
+            "ANTH358",
+            "ANTH383",
+            "ANTH384",
+            "ANTH394",
+            "ANTH450",
+            "ANTH452",
+            "ANTH453",
+            "ANTH455",
+            "ANTH484",
+            "ANTH494"
+          ]
+        }
+      ]
+    }
+  },
+  "Anthropology (Bachelor of Arts - Honours)": {
+    "programId": "Anthropology (Bachelor of Arts - Honours)",
+    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/programs/rJiDpQCGV?bc=true&bcCurrent=Anthropology&bcItemType=programs",
+    "requirements": {
+      "year-1": [
+        {
+          "Complete all of the following": [
+            { "Complete all of: ": ["ANTH100"] },
+            "Complete 13.5 units of electives"
+          ]
+        }
+      ],
+      "year-2": [
+        {
+          "Complete all of the following": [
+            {
+              "Earned a minimum GPA of 6.5 in all of: ": [
+                "ANTH200",
+                "ANTH240",
+                "ANTH250",
+                "ANTH260"
+              ]
+            },
+            "Complete 9 units of electives"
+          ]
+        }
+      ],
+      "year-3": [
+        {
+          "Complete all of the following": [
+            { "Complete 1 of: ": ["ANTH317", "ANTH318", "ANTH319"] },
+            { "Complete 1 of: ": ["ANTH400A", "ANTH400B"] },
+            "Complete 6.0 units from ANTH  300 - 499",
+            {
+              "Method and TheoryComplete 3 of: ": [
+                "ANTH309",
+                "ANTH311",
+                "ANTH317",
+                "ANTH318",
+                "ANTH319",
+                "ANTH343",
+                "ANTH360",
+                "ANTH367",
+                "ANTH380",
+                "ANTH381",
+                "ANTH383",
+                "ANTH384",
+                "ANTH395",
+                "ANTH400A",
+                "ANTH400B",
+                "ANTH402",
+                "ANTH405",
+                "ANTH409",
+                "ANTH441",
+                "ANTH450",
+                "ANTH454",
+                "ANTH460",
+                "ANTH485",
+                "ANTH495",
+                "SOSC300"
+              ]
+            },
+            {
+              "Complete  2  of the following": [
+                "Complete 3 units of: courses from the Archaeology subfield (see list below)",
+                "Complete 3 units of: courses from the Cultural Anthropology subfield (see list below)",
+                "Complete 3 units of: courses from the Biological Anthropology subfield (see list below)"
+              ]
+            },
+            "Complete 1.5 units of: courses the subfield not used in the previous requirement.",
+            { "Complete all of: ": ["ANTH499"] },
+            "Complete 7.5 units of electives"
+          ]
+        }
+      ],
+      "year-4": [
+        "Select courses from the following subfields as indicated in the program requirements above"
+      ],
+      "year-5": [
+        {
+          "Select from: ": [
+            "ANTH315",
+            "ANTH340",
+            "ANTH341",
+            "ANTH343",
+            "ANTH344",
+            "ANTH346",
+            "ANTH347",
+            "ANTH348",
+            "ANTH349",
+            "ANTH360",
+            "ANTH361",
+            "ANTH362",
+            "ANTH365",
+            "ANTH367",
+            "ANTH391",
+            "ANTH392",
+            "ANTH397",
+            "ANTH398",
+            "ANTH442",
+            "ANTH449",
+            "ANTH482",
+            "ANTH492"
+          ]
+        }
+      ],
+      "year-6": [
+        {
+          "Select from: ": [
+            "ANTH302",
+            "ANTH303",
+            "ANTH304",
+            "ANTH305",
+            "ANTH307",
+            "ANTH312",
+            "ANTH314",
+            "ANTH315",
+            "ANTH325",
+            "ANTH329",
+            "ANTH336",
+            "ANTH365",
+            "ANTH366",
+            "ANTH371",
+            "ANTH372",
+            "ANTH373",
+            "ANTH382",
+            "ANTH391",
+            "ANTH393",
+            "ANTH396",
+            "ANTH405",
+            "ANTH408",
+            "ANTH410",
+            "ANTH433",
+            "ANTH481",
+            "ANTH483",
+            "ANTH491",
+            "ANTH493"
+          ]
+        }
+      ],
+      "year-7": [
+        {
+          "Select from: ": [
+            "ANTH350",
+            "ANTH351",
+            "ANTH352",
+            "ANTH355",
+            "ANTH356",
+            "ANTH357",
+            "ANTH358",
+            "ANTH383",
+            "ANTH384",
+            "ANTH394",
+            "ANTH450",
+            "ANTH452",
+            "ANTH455",
+            "ANTH484",
+            "ANTH494"
+          ]
+        }
+      ]
+    }
+  }
+}
