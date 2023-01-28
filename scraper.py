@@ -12,10 +12,12 @@ import copy
 import json
 import os
 
+from utils import get_page_h2, top_ul
+
 
 """
-# ul denotes new requirement (complete 1 of, complete all of)
-# ul's each li denotes requirement item
+ul denotes new requirement (complete 1 of, complete all of)
+ul's each li denotes requirement item
 for ul
     look into each li
     if li has ul child
@@ -28,15 +30,20 @@ for ul
 
 def get_page_source(url):
     # object of Options class, passing headless parameter
-    c = Options()
-    c.add_argument("--headless")
+    options = Options()
+    # following 3 lines allow for headless
+    options.add_argument("--headless")
     user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
-    c.add_argument(f"user-agent={user_agent}")
+    options.add_argument(f"user-agent={user_agent}")
+    # disable message:"DevTools listening on ws...
+    options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
+    # ensure version matches installed chrome version
     s = Service("drivers/chromedriver-v109.exe")
-    browser = webdriver.Chrome(service=s, options=c)
-    # browser.set_window_size(1120, 550)
 
+    browser = webdriver.Chrome(service=s, options=options)
+    print("Running webdriver")
+    # browser.set_window_size(1120, 550)
     browser.get(url)
 
     try:
@@ -70,16 +77,6 @@ def get_prereq_container(url=None, soup=None):
     return container
 
 
-def top_ul(tag):
-    return len(tag.find_parents("ul")) == 0 and tag.name == "ul"
-
-
-def get_page_h2(soup):
-    full_title_h2 = soup.select("#__KUALI_TLP h2")
-    if (len(full_title_h2) > 0):
-        return full_title_h2[0].get_text()
-
-
 def get_requirements(ul):
     if (ul == None):
         return []
@@ -110,7 +107,7 @@ def get_requirements(ul):
 
 
 def get_course_requirements(course_url):
-    print("Fetching course:", course_url)
+    print("\nScraping course:", course_url)
     soup = get_page_source(course_url)
     container = get_prereq_container(soup=soup)
 
@@ -122,6 +119,8 @@ def get_course_requirements(course_url):
     course_id = course_title.split(" - ")[0]
     short_description = course_title.split(" - ")[1]
 
+    print("Scraped ", course_id)
+
     return {
         course_id: {
             "courseId": course_id,
@@ -132,29 +131,14 @@ def get_course_requirements(course_url):
     }
 
 
-def get_program_courses(courses_container):
-    courses = {}
-
-    # get all course name and urls, then requirements
-    for i, course in enumerate(courses_container.find_all('a')):
-        # course_name = course.get_text()
-        course_url = "https://www.uvic.ca/calendar/undergrad/index.php" + \
-            str(course['href'])
-        # print(course_name, course_url)
-        get_course_requirements(course_url)
-
-        # if (i > 3): break #for testing
-
-    # print(json.dumps(program_courses, indent=2))
-    return courses
-
-
 def get_program_requirements(program_url):
+    print("\nScraping program:", program_url)
+
     soup = get_page_source(program_url)
     container = get_prereq_container(program_url, soup=soup)
     program_requirements = {}
 
-    program_name = get_page_h2(soup=soup)
+    program_title = get_page_h2(soup=soup)
     # root ul of all years from program
     all_year_ul = container.find_all(top_ul)
 
@@ -163,8 +147,10 @@ def get_program_requirements(program_url):
         year = "year-" + str(i)
         program_requirements[year] = requirements
 
+    print("Scraped ", program_title)
+
     return {
-        program_name: program_requirements
+        program_title: program_requirements
     }
 
 
@@ -185,7 +171,7 @@ def main():
     with open("output/"+json_output_name, "w") as outfile:
         outfile.write(json.dumps(course_requirements))
 
-    print("End of scraping.")
+    print("\nEnd of scraping 😁😁😁")
 
 
 if __name__ == "__main__":

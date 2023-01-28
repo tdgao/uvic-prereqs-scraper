@@ -1,8 +1,1 @@
-{
-  "ANTH240": {
-    "courseId": "ANTH240",
-    "shortDescription": "Archaeology",
-    "requirements": [],
-    "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/view/5e4f0a11d80a06250021d83a"
-  }
-}
+{"ASTR150": {"courseId": "ASTR150", "shortDescription": "Concepts in Modern Astronomy", "prerequisites": [{"Complete  1  of the following": [{"Complete all of the following": [{"Completed or concurrently enrolled in 1 of: ": ["MATH100", "MATH109"]}, {"Completed or concurrently enrolled in 1 of: ": ["PHYS110", "PHYS120"]}]}, "or permission of the department."]}], "url": "https://www.uvic.ca/calendar/undergrad/index.php#/courses/HySJ0P67N"}}
