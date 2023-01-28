@@ -31,7 +31,7 @@ for ul
 
 
 def get_page_source(url, load_element=".rules-wrapper"):
-    time.sleep(random.randrange(3, 10, 1))
+    time.sleep(random.randrange(2, 10, 1))
     # object of Options class, passing headless parameter
     options = Options()
     # following 3 lines allow for headless
@@ -125,7 +125,7 @@ def get_course_requirements(course_url):
     course_id = course_title.split(" - ")[0]
     short_description = course_title.split(" - ")[1]
 
-    print("Scraped", course_id)
+    print("Scraped:", course_id)
 
     return {
         course_id: {
@@ -154,7 +154,7 @@ def get_program_requirements(program_url):
         year = "year-" + str(i)
         program_requirements[year] = requirements
 
-    print("Scraped", program_title)
+    print("Scraped:", program_title)
 
     return {
         program_title: {
@@ -165,7 +165,7 @@ def get_program_requirements(program_url):
     }
 
 
-def get_all_program_reqs():
+def get_all_program_reqs(testing=False):
     # get all program URLs
     # run through URLs and populate object with requirements
     # do the same with courses
@@ -183,13 +183,13 @@ def get_all_program_reqs():
         program_reqs = get_program_requirements(program_url)
         all_program_reqs = {**all_program_reqs, **program_reqs}
 
-        if i > 3:  # end early for testing
+        if testing and i > 3:  # end early for testing
             break
 
     return all_program_reqs
 
 
-def get_all_course_reqs():
+def get_all_course_reqs(testing=False):
     all_course_reqs = {}
     # get subject list container, get all a tags from subject list,
     # for each subject site, scrape all course prereqs
@@ -202,7 +202,7 @@ def get_all_course_reqs():
         courses_container = get_page_source(
             subject_url, load_element="#__KUALI_TLP ul").select("#__KUALI_TLP")[0]
 
-        if i > 2:  # end early for testing
+        if testing and i > 2:  # end early for testing
             break
 
         for i, course in enumerate(courses_container.find_all('a')):
@@ -211,7 +211,7 @@ def get_all_course_reqs():
             course_reqs = get_course_requirements(course_url)
             all_course_reqs = {**all_course_reqs, **course_reqs}
 
-            if i > 2:  # end early for testing
+            if testing and i > 2:  # end early for testing
                 break
 
     return all_course_reqs
