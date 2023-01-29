@@ -29,9 +29,11 @@ def transform_data(bar):
             vike_course["pid"]
 
         transformed_courses[course_id] = {
+            "courseId": vike_course["__catalogCourseId"],
+            "title": vike_course["title"],
+            "pid": vike_course["pid"],
             "parsedRequirements": reqs,
             "url": url,
-            ** vike_course
         }
         bar()
 
