@@ -225,12 +225,12 @@ def main():
     with open("output/"+json_output_name, "w") as outfile:
         outfile.write(json.dumps(all_program_reqs))
 
-    all_course_reqs = get_all_course_reqs()
+    # all_course_reqs = get_all_course_reqs()
 
-    # Writing to courses.json
-    json_output_name = "courses.json"
-    with open("output/"+json_output_name, "w") as outfile:
-        outfile.write(json.dumps(all_course_reqs))
+    # # Writing to courses.json
+    # json_output_name = "courses.json"
+    # with open("output/"+json_output_name, "w") as outfile:
+    #     outfile.write(json.dumps(all_course_reqs))
 
     print("\nEnd of scraping 😁😁😁")
 
