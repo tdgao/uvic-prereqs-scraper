@@ -23,7 +23,7 @@ def transform_data(bar):
         if hasReqs:
             html_reqs = vike_course["preAndCorequisites"]
             reqs = get_requirements(
-                BeautifulSoup(html_reqs, "html.parser"))
+                BeautifulSoup(html_reqs, "html.parser"))[0][""] # [0][""] is a bandaid for fixing it returning [{"": reqs}] for some reason
 
         url = "https://www.uvic.ca/calendar/undergrad/index.php#/courses/" + \
             vike_course["pid"]
@@ -33,6 +33,7 @@ def transform_data(bar):
             "title": vike_course["title"],
             "pid": vike_course["pid"],
             "parsedRequirements": reqs,
+            "htmlRequirements": html_reqs,
             "url": url,
         }
         bar()
