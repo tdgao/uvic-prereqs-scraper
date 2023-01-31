@@ -20,6 +20,7 @@ def transform_data(bar):
 
         hasReqs = "preAndCorequisites" in vike_course
         reqs = []
+        html_reqs = None
         if hasReqs:
             html_reqs = vike_course["preAndCorequisites"]
             reqs = get_requirements(
