@@ -31,7 +31,7 @@ for ul
 
 
 def get_page_source(url, load_element=".rules-wrapper"):
-    time.sleep(random.randrange(2, 10, 1))
+    # time.sleep(random.randrange(2, 10, 1))
     # object of Options class, passing headless parameter
     options = Options()
     # following 3 lines allow for headless
@@ -142,12 +142,12 @@ def get_program_requirements(program_url):
     print("\nScraping program:", program_url)
 
     soup = get_page_source(program_url)
-    container = get_prereq_container(program_url, soup=soup)
+    rules_wrapper = get_prereq_container(program_url, soup=soup)
     program_requirements = {}
 
     program_title = get_page_h2(soup=soup)
     # root ul of all years from program
-    all_year_ul = container.find_all(top_ul)
+    all_year_ul = rules_wrapper.find_all(top_ul)
 
     for i, year_ul in enumerate(all_year_ul, 1):
         requirements = get_requirements(year_ul)
@@ -160,7 +160,8 @@ def get_program_requirements(program_url):
         program_title: {
             "programId": program_title,
             "url": program_url,
-            "requirements": program_requirements
+            "requirements": program_requirements,
+            "htmlRequirements": str(rules_wrapper),
         }
     }
 
@@ -218,19 +219,35 @@ def get_all_course_reqs(testing=False):
 
 
 def main():
-    all_program_reqs = get_all_program_reqs()
+
+    ### GET ALL PROGRAM REQS
+    # all_program_reqs = get_all_program_reqs()
+
+    # # Writing to programs.json
+    # json_output_name = "programs.json"
+    # with open("output/"+json_output_name, "w") as outfile:
+    #     outfile.write(json.dumps(all_program_reqs))
+
+
+    ### GET SOME PROGRAM REQS
+    program_urls = [
+        "https://www.uvic.ca/calendar/undergrad/index.php#/programs/SkYVTmCzE",
+        "https://www.uvic.ca/calendar/undergrad/index.php#/programs/ByRI6X0z4",
+        "https://www.uvic.ca/calendar/undergrad/index.php#/programs/SJKVp7AME",
+        "https://www.uvic.ca/calendar/undergrad/index.php#/programs/B1gkKa70z4",
+        "https://www.uvic.ca/calendar/undergrad/index.php#/programs/S1l9V6mCfV",
+        "https://www.uvic.ca/calendar/undergrad/index.php#/programs/HkCK67AGV",
+    ]
+    program_reqs = {}
+    for url in program_urls:
+        cur = get_program_requirements(url)
+        program_reqs = {**program_reqs, **cur}
 
     # Writing to programs.json
-    json_output_name = "programs.json"
+    json_output_name = "temp.json"
     with open("output/"+json_output_name, "w") as outfile:
-        outfile.write(json.dumps(all_program_reqs))
+        outfile.write(json.dumps(program_reqs))
 
-    # all_course_reqs = get_all_course_reqs()
-
-    # # Writing to courses.json
-    # json_output_name = "courses.json"
-    # with open("output/"+json_output_name, "w") as outfile:
-    #     outfile.write(json.dumps(all_course_reqs))
 
     print("\nEnd of scraping 😁😁😁")
 
